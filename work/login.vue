@@ -10,7 +10,7 @@
              class="demo-ruleForm login-container">
       <h3 class="title">欢迎登录</h3>
       <el-form-item prop="username">
-        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>
+        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>
       </el-form-item>
       <el-form-item prop="pwd">
         <el-input type="password" v-model="account.pwd" :autofocus="pwdFocus" auto-complete="off" placeholder="请输入登录密码"></el-input>
@@ -25,7 +25,7 @@
       </el-form-item>
 	  
 	        <h3 class="title">欢迎登录</h3>
-    </el-form>
+    </el-form>	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>
 	<div class="footer">
       <footer-copyright></footer-copyright>
     </div>
@@ -54,7 +54,7 @@
             this.validateCorrect();
           }
           callback();
-        }
+        }	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>
       };
       return {
         loading: false,
@@ -95,10 +95,7 @@
           name: 'administrator',
           email: '888888@163.com'
         };
-        this.loading = true;
-        let status = API.login(result);
-        if(status == 'success'){
-          localStorage.setItem('access-user', JSON.stringify(result));
+ess-user', JSON.stringify(result));
           window.localStorage.removeItem('register-user');
           that.$router.push({path: '/'});
         } else {
