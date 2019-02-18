@@ -23,6 +23,8 @@
       <el-form-item style="width:100%;">
         <el-button type="primary" style="width:100%;" @click.native.prevent="handleLogin" :disabled="allowLogin" :loading="loading">登录</el-button>
       </el-form-item>
+	  
+	        <h3 class="title">欢迎登录</h3>
     </el-form>
 	<div class="footer">
       <footer-copyright></footer-copyright>
@@ -33,7 +35,8 @@
   import API from '../api/api_user'
   export default {
     data() {
-      var validateAccount = (rules, value, callback) => {
+      var validateAccount = (rules, value, 
+	        <h3 class="title">欢迎登录</h3>callback) => {
         if (value === '') {
           callback(new Error('请输入账号'));
         } else {
@@ -44,9 +47,7 @@
           callback();
         }
       };
-	  var validatePwd = (rules, value, callback) => {
-        if (value === '') {
-          callback(new Error('请输入密码'));
+
         } else {
           if (this.account.pwd !== '') {
             this.account.pwd = value;
@@ -70,6 +71,7 @@
             {required: true, validator: validatePwd, trigger: 'change'}
           ]
         },
+		      <h3 class="title">欢迎登录</h3>
         pwdFocus: false,
 		allowLogin: true,
         checked: true
