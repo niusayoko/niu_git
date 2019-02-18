@@ -1,1 +1,8 @@
+<<<<<<< HEAD
 aaabbbb
+=======
+
+aaa
+abc
+def
+>>>>>>> b-1.0.0
