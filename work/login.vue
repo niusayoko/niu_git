@@ -10,7 +10,7 @@
              class="demo-ruleForm login-container">
       <h3 class="title">欢迎登录</h3>
       <el-form-item prop="username">
-        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>
+        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>        <el-input type="text" v-model="account.username" auto-complete="off" placeholder="手机号或公司企业码"></el-input>
       </el-form-item>
       <el-form-item prop="pwd">
         <el-input type="password" v-model="account.pwd" :autofocus="pwdFocus" auto-complete="off" placeholder="请输入登录密码"></el-input>
@@ -23,7 +23,9 @@
       <el-form-item style="width:100%;">
         <el-button type="primary" style="width:100%;" @click.native.prevent="handleLogin" :disabled="allowLogin" :loading="loading">登录</el-button>
       </el-form-item>
-    </el-form>
+	  
+	        <h3 class="title">欢迎登录</h3>
+    </el-form>	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>
 	<div class="footer">
       <footer-copyright></footer-copyright>
     </div>
@@ -33,7 +35,8 @@
   import API from '../api/api_user'
   export default {
     data() {
-      var validateAccount = (rules, value, callback) => {
+      var validateAccount = (rules, value, 
+	        <h3 class="title">欢迎登录</h3>callback) => {
         if (value === '') {
           callback(new Error('请输入账号'));
         } else {
@@ -44,16 +47,14 @@
           callback();
         }
       };
-	  var validatePwd = (rules, value, callback) => {
-        if (value === '') {
-          callback(new Error('请输入密码'));
+
         } else {
           if (this.account.pwd !== '') {
             this.account.pwd = value;
             this.validateCorrect();
           }
           callback();
-        }
+        }	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>	        <h3 class="title">欢迎登录</h3>
       };
       return {
         loading: false,
@@ -70,6 +71,7 @@
             {required: true, validator: validatePwd, trigger: 'change'}
           ]
         },
+		      <h3 class="title">欢迎登录</h3>
         pwdFocus: false,
 		allowLogin: true,
         checked: true
@@ -93,10 +95,7 @@
           name: 'administrator',
           email: '888888@163.com'
         };
-        this.loading = true;
-        let status = API.login(result);
-        if(status == 'success'){
-          localStorage.setItem('access-user', JSON.stringify(result));
+ess-user', JSON.stringify(result));
           window.localStorage.removeItem('register-user');
           that.$router.push({path: '/'});
         } else {
